@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Angular Directives</h1>
+
+  <p appStyle="purple" fontWeight="bold">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque exercitationem expedita ipsum maxime modi natus praesentium sint sunt suscipit! Cumque quos, ut. Amet autem corporis ducimus qui quis ut vitae?</p>
+
+  <p appStyle fontWeight>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque exercitationem expedita ipsum maxime modi natus praesentium sint sunt suscipit! Cumque quos, ut. Amet autem corporis ducimus qui quis ut vitae?</p>
+
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+
+  <!--<div class="wrap" *ngIf="isVisible">-->
+    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto dolore eos facilis, iure odit ratione velit voluptas? Labore, nemo.-->
+  <!--</div>-->
+
+  <!--<ng-template [ngIf]="isVisible">-->
+    <!--<div class="wrap">-->
+    <!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto dolore eos facilis, iure odit ratione velit voluptas? Labore, nemo.-->
+    <!--</div>-->
+  <!--</ng-template>-->
+
+  <div class="wrap" *appIfnot="!isVisible">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. A architecto dolore eos facilis, iure odit ratione velit voluptas? Labore, nemo.
+  </div>
+
+</div>

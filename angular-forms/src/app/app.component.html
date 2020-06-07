@@ -1,0 +1,101 @@
+<div class="container">
+  <h1>Angular Forms</h1>
+  <hr>
+
+  <h2>NG Model</h2>
+
+  <app-switch
+    [(ngModel)]="appState"
+    (ngModelChange)="handleChange()"
+  >
+  </app-switch>
+
+  appState {{appState}}
+
+  <!--
+  <form class="card" [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-control">
+      <label>Email</label>
+      <input type="text" placeholder="Email" formControlName="email">
+      <div
+        *ngIf="form.get('email').invalid &&
+        form.get('email').touched"
+        class="validation">
+        <small *ngIf="form.get('email').errors.required">
+          Email can't be empty
+        </small>
+        <small *ngIf="form.get('email').errors.email">
+          This is not email.
+        </small>
+        <small *ngIf="form.get('email').errors.restrictedEmail">
+          Try again, stupid Flanders
+        </small>
+        <small *ngIf="form.get('email').errors.uniqEmail">
+          You already here, sucker
+        </small>
+      </div>
+    </div>
+
+    <div class="form-control">
+      <label>Password</label>
+      <input type="password" placeholder="Password" formControlName="password">
+
+      <div
+        *ngIf="form.get('password').invalid &&
+        form.get('password').touched"
+        class="validation">
+        <small *ngIf="form.get('password').errors.required">
+          Password can't be empty
+        </small>
+        <small *ngIf="form.get('password').errors.minlength">
+          Длина должна быть не менее
+          {{form.get('password').errors.minlength.requiredLength}}
+          Сейчас количество символов
+          {{form.get('password').errors.minlength.actualLength}}
+        </small>
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="card" formGroupName="address">
+      <h2>Address</h2>
+      <div class="form-control">
+        <select formControlName="country">
+          <option value="ru">Russia</option>
+          <option value="ua">Ukraine</option>
+          <option value="by">Belarus</option>
+        </select>
+      </div>
+      
+      <div class="form-control">
+        <input type="text" formControlName="city">
+      </div>
+      
+      <button type="button" class="btn" (click)="setCapital()">Choose capital</button>
+    </div>
+    <hr>
+    <div class="card" formGroupName="skills">
+      <h2>Your skills</h2>
+      <button class="btn" type="button" (click)="addSkill()">Add skill</button>
+      
+      <div
+        class="form-control"
+        *ngFor="let control of form.get('skills').controls; let idx = index"
+      >
+        <label>Умение {{ idx + 1}}</label>
+        <input type="text" [formControlName]="idx">
+      </div>
+    </div>
+
+    <button class="btn" type="submit" [disabled]="form.invalid || form.pending">Send</button>
+  </form>
+
+  -->
+
+
+
+
+
+
+</div>

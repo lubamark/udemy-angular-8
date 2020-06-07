@@ -1,0 +1,16 @@
+<div>
+  <button
+    [class.active]="state === 'on'"
+    class="btn"
+    (click)="setState('on')"
+  >
+    On
+  </button>
+  <button
+    [class.active]="state === 'off'"
+    class="btn"
+    (click)="setState('off')"
+  >
+    Off
+  </button>
+</div>
